@@ -1,6 +1,6 @@
 // ====== EDIT YOUR CONTENT HERE (projects below are samples) ======
-// Set this to a committed image path (for example "images/me.jpg") when your portrait is added.
-const PHOTO = "";
+// Portrait image: add the supplied photo at images/me.jpg.
+const PHOTO = "images/me.jpg";
 const EMAIL = "arpit24ecs@student.mes.ac.in";
 const GITHUB = "https://github.com/amananandsingh01";
 const LINKEDIN = "https://www.linkedin.com/in/arpit-singh-26a943374";
