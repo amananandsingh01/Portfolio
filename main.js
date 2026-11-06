@@ -1,6 +1,18 @@
 // Page behaviour: menu, skills, projects, filters, hero spotlight, contact form
 const $ = id => document.getElementById(id);
 
+// Replace missing images with a visible, accessible fallback instead of a broken icon.
+function showImageFallback(image, label) {
+  image.addEventListener("error", () => {
+    const fallback = document.createElement("div");
+    fallback.className = "ph";
+    fallback.setAttribute("role", "img");
+    fallback.setAttribute("aria-label", label);
+    fallback.textContent = `🖼️ ${label}`;
+    image.replaceWith(fallback);
+  }, { once: true });
+}
+
 // Mobile menu
 const nav = $("nav"), menu = $("menu");
 function setMenu(open){
@@ -20,7 +32,9 @@ $("marquee").innerHTML = skills.map(s => `<span>${s} ✦</span>`).join("").repea
 // Photo
 $("photo").innerHTML = PHOTO
   ? `<img src="${PHOTO}" alt="Arpit Anand Singh">`
-  : `<div class="ph" role="img" aria-label="Photo placeholder">📷 Your photo</div>`;
+  : `<div class="ph" role="img" aria-label="Photo placeholder">📷 Add a portrait</div>`;
+const photoImage = $("photo").querySelector("img");
+if (photoImage) showImageFallback(photoImage, "Portrait unavailable — add a photo to images/me.jpg");
 
 // Projects
 const cats = ["All", ...new Set(projects.map(p => p.cat))];
@@ -33,6 +47,7 @@ $("grid").innerHTML = projects.map((p, i) => `
     <ul class="tags">${p.tags.map(t => `<li>${t}</li>`).join("")}</ul>
     <div class="links">${p.live ? `<a href="${p.live}" target="_blank" rel="noopener">Live site</a>` : ""}${p.code ? `<a href="${p.code}" target="_blank" rel="noopener">Code on GitHub</a>` : ""}</div>
   </article>`).join("");
+$("grid").querySelectorAll("img").forEach(image => showImageFallback(image, `${image.alt} unavailable`));
 
 $("chips").innerHTML = cats.map((c, i) => `<button class="chip" aria-pressed="${i === 0}" data-c="${c}">${c}</button>`).join("");
 $("chips").addEventListener("click", e => {
