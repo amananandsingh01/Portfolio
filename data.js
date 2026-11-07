@@ -19,6 +19,10 @@ const projects = [
   {title:"Hotel Reservation System", cat:"Python",
    desc:"Object-oriented booking system with Standard, Deluxe and Suite rooms, reservations and cancellations, simulated payments and JSON storage.",
    aka:["booking","hotel app","reservation"],
-   tags:["Python","OOP","JSON"], img:"images/hotel-reservation-system.png", code:"https://github.com/amananandsingh01/HOTEL_RESERVATION_PROJECT-"}
+   tags:["Python","OOP","JSON"], img:"images/hotel-reservation-system.png", code:"https://github.com/amananandsingh01/HOTEL_RESERVATION_PROJECT-"},
+  {title:"Campus Skill Exchange", cat:"Full-stack app",
+   desc:"A peer-to-peer platform for college students to discover tutors, exchange skills, send collaboration requests, and track their learning journey.",
+   aka:["campus skill exchange","skill exchange","student collaboration","web programming mini project"],
+   tags:["HTML","CSS","JavaScript","Node.js","Express.js","PostgreSQL","JWT"], code:"https://github.com/amananandsingh01/WEB_PROGRAMMING_MINIPROJECT"}
 ];
 // ====================================
