@@ -23,6 +23,6 @@ const projects = [
   {title:"Campus Skill Exchange", cat:"Full-stack app",
    desc:"A peer-to-peer platform for college students to discover tutors, exchange skills, send collaboration requests, and track their learning journey.",
    aka:["campus skill exchange","skill exchange","student collaboration","web programming mini project"],
-   tags:["HTML","CSS","JavaScript","Node.js","Express.js","PostgreSQL","JWT"], code:"https://github.com/amananandsingh01/WEB_PROGRAMMING_MINIPROJECT"}
+   tags:["HTML","CSS","JavaScript","Node.js","Express.js","PostgreSQL","JWT"], img:"images/Campus skill exchange.jpeg", code:"https://github.com/amananandsingh01/WEB_PROGRAMMING_MINIPROJECT"}
 ];
 // ====================================
